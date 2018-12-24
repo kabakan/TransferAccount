@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 public class TransferImpl implements TransferService {
-    private static final Logger LOG = LoggerFactory.getLogger(TransferService.class);
+    private final Logger LOG = LoggerFactory.getLogger(TransferService.class);
 
     private AccountsService accountsService = new AccountsImpl();
 
