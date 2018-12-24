@@ -1,0 +1,279 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "RevolutTransferAccount APIs",
+    "version" : "1.0.0",
+    "title" : "RevolutTransferAccount",
+    "contact" : {
+      "name" : "Kalmanbetov Kanat",
+      "url" : "https://github.com/kabakan/TransferAccount/",
+      "email" : "kanat.kaba@gmail.com"
+    }
+  },
+  "host" : "localhost:8587",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "Accounts",
+    "description" : "Settings accounts"
+  }, {
+    "name" : "ArchTransfer",
+    "description" : "Settings  ArchTransfer"
+  }, {
+    "name" : "Transfer",
+    "description" : "Settings Transfer"
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/api/accounts/add" : {
+      "post" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Create accounts",
+        "description" : "",
+        "operationId" : "add",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/delete" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Delete accounts",
+        "description" : "",
+        "operationId" : "delete",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/generate" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Getenerate account code",
+        "description" : "",
+        "operationId" : "getnereateAcc",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/get" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Get accounts by accCode",
+        "description" : "",
+        "operationId" : "getAccounts",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "clientName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "accCode",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/getAll" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Get all accounts",
+        "description" : "",
+        "operationId" : "getAll",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/getCurrency" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Get all currency",
+        "description" : "",
+        "operationId" : "getCurrency",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/accounts/health" : {
+      "get" : {
+        "tags" : [ "Accounts" ],
+        "operationId" : "home",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/update" : {
+      "post" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "Update accounts",
+        "description" : "",
+        "operationId" : "update",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/archTransfer/getAllArch" : {
+      "get" : {
+        "tags" : [ "ArchTransfer" ],
+        "summary" : "Get all ArchTransfer",
+        "description" : "",
+        "operationId" : "getAllArch",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/archTransfer/getArch" : {
+      "get" : {
+        "tags" : [ "ArchTransfer" ],
+        "summary" : "Get ArchTransfer by accCode",
+        "description" : "",
+        "operationId" : "getArchTransfer",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "fromAccCode",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "toAccCode",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/transfer/add" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "Create transfer",
+        "description" : "",
+        "operationId" : "add",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/transfer/get" : {
+      "get" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "Get transfer by accCode",
+        "description" : "",
+        "operationId" : "getTransfer",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "fromAccCode",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "toAccCode",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/transfer/getAll" : {
+      "get" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "Get all transfer",
+        "description" : "",
+        "operationId" : "getAll",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api/transfer/send" : {
+      "get" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "Send transfer",
+        "description" : "",
+        "operationId" : "send",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    }
+  }
+}
