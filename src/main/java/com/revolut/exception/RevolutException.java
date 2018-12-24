@@ -13,7 +13,10 @@ public class RevolutException extends Exception{
 
     public RevolutException() {  super(); }
 
-    public RevolutException(String message) { super(message); }
+    public RevolutException(String message) {
+        super(message);
+        LOG.error(message);
+    }
 
     public RevolutException(Throwable cause) { super(cause);  }
 
