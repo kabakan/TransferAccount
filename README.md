@@ -1,6 +1,5 @@
-# TransferAccount
-
-# TransferAccounts
+# framework GlassFish
+# TransferAccount 
 
 #Для тестирования создание счетов и переводы RavolutTransferAccount
 
