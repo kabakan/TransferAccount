@@ -37,12 +37,14 @@ curl -X POST \
   http://localhost:8587/api/accounts/update \
   -H 'Content-Type: application/json' \
   -d '{
-  "id": 2,
-  "clientName": "Danil Kim",
-  "accCode": "ACC5577417899",
-  "currCode": "USD",
-  "summ": 401
-}'
+        "id": 2,
+        "clientName": "Danil Kim",
+        "accCode": "ACC5577417899",
+        "currCode": "USD",
+        "summ": 1010,
+        "status": "ACTIVE",
+        "createDate": 1545635665507
+    }'
 
 #1.6. Удалить счет
 
