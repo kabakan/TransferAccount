@@ -86,7 +86,7 @@ public class AccountsController {
         try {
             return  Response.ok().entity(accountsService.getAll()).build();
         } catch (RuntimeException | RevolutException ex) {
-            LOG.error("ERROR: ServiceAccounts.get "+ex.getMessage());
+            LOG.error("ERROR: ServiceAccounts.getAll "+ex.getMessage());
             return null;
         }
     }
@@ -111,7 +111,7 @@ public class AccountsController {
         try {
             return  Response.ok().entity(accountsService.generate()).build();
         } catch (RuntimeException | RevolutException ex) {
-            LOG.error("ERROR: GetCurrecny "+ex.getMessage());
+            LOG.error("ERROR: Generate "+ex.getMessage());
             return null;
         }
     }

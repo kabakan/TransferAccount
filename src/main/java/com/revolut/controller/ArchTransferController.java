@@ -33,7 +33,7 @@ public class ArchTransferController {
         try {
             return  Response.ok().entity(archTransferService.get(fromAccCode, toAccCode)).build();
         } catch (RuntimeException | RevolutException ex) {
-            LOG.error("ERROR: ArchTransfer.get "+ex.getMessage());
+            LOG.error("ERROR: ArchTransfer.getArch "+ex.getMessage());
             return null;
         }
     }
@@ -45,7 +45,7 @@ public class ArchTransferController {
         try {
             return  Response.ok().entity(archTransferService.getAll()).build();
         } catch (RuntimeException | RevolutException ex) {
-            LOG.error("ERROR: ArchTransfer.get "+ex.getMessage());
+            LOG.error("ERROR: ArchTransfer.getAllArch "+ex.getMessage());
             return null;
         }
     }

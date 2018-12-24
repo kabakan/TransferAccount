@@ -72,7 +72,7 @@ public class TransferController {
         try {
             return  Response.ok().entity(transferService.getAll()).build();
         } catch (RuntimeException | RevolutException ex) {
-            LOG.error("ERROR: transfer.get "+ex.getMessage());
+            LOG.error("ERROR: transfer.getAll "+ex.getMessage());
             return null;
         }
     }
