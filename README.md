@@ -41,9 +41,7 @@ curl -X POST \
         "clientName": "Danil Kim",
         "accCode": "ACC5577417899",
         "currCode": "USD",
-        "summ": 1010,
-        "status": "ACTIVE",
-        "createDate": 1545635665507
+        "summ": 1010
     }'
 
 #1.6. Удалить счет
